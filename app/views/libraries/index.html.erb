@@ -3,6 +3,12 @@
 <% @libraries.each do |lib| %>
 <div>
   <strong> <%= lib.name %> </strong> - <%= link_to "View Library", library_path(lib)  %>
+  <br>
+  <% if current_user %>
+      <%= button_to "Join #{lib.name} Library", library_users_path(lib) %>
+  <% end %>
 </div>
 </br>
 <% end %>
+
+<%= link_to "Post your Local Library!", new_library_path%>
