@@ -1,3 +1,7 @@
 <div>
   Welcome, <%= @user.email %>
+</br>
+  Began: <%= @user.created_at.strftime("%m/%d/%Y")  %>
 </div>
+</br>
+<%= link_to "Delete Profile", @user, method: :delete, :data => {:confirm => 'Are you sure?'} %>

@@ -1,0 +1,8 @@
+<h1>Libraries</h1>
+
+<% @libraries.each do |lib| %>
+<div>
+  <strong> <%= lib.name %> </strong> - <%= link_to "View Library", library_path(lib)  %>
+</div>
+</br>
+<% end %>
